@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- **CLI `--help` / `--version` without a database (#487)** — `cubrid-mcp-server -h`/`--help` and `--version` are handled before configuration is read, exit 0, and print to stderr (usage lists the stdio transport, the four required `CUBRID_*` variables, and docs links; version uses the package `__version__`). Other unknown arguments still fail clearly. README and Troubleshooting mention the flags.
+- **CLI `--help` / `--version` without a database (#487)** — `cubrid-mcp-server -h`/`--help` and `--version` are handled before configuration is read, exit 0, and print to stderr (usage lists the stdio transport, the four required `CUBRID_*` variables, and docs links; version uses the package `__version__`). Unrecognized arguments exit 2 with an argparse error on stderr. README and Troubleshooting mention the flags.
 
 ### Documentation
 
