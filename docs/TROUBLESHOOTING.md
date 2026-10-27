@@ -4,6 +4,13 @@
 
 Symptom → cause → fix for the most common problems.
 
+
+## Confirming the install without a database
+
+**Symptom:** you want to know whether `uvx`/`pipx` installed the server and which version it is, before configuring CUBRID.
+
+Run `cubrid-mcp-server --help` or `cubrid-mcp-server --version`. Both exit 0, print to stderr, and never open a database connection. If instead you see `configuration error: missing required environment variable: …`, an older build is on your `PATH` — upgrade the package or point the client at the new console script.
+
 ## The client cannot connect to the server
 
 **Symptom:** the MCP client shows the server as failed or unavailable.

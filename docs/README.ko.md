@@ -126,6 +126,15 @@ export CUBRID_REPORTING_MCP_MAX_ROWS=500   # 연결별 선택 튜닝
 
 ### 실행
 
+데이터베이스 없이 설치를 확인하려면:
+
+```bash
+cubrid-mcp-server --help
+cubrid-mcp-server --version
+```
+
+두 플래그는 종료 코드 0으로 stderr에 출력하며, `CUBRID_*`를 읽거나 MCP 루프를 시작하지 않습니다.
+
 PyPI에서 [`uvx`](https://docs.astral.sh/uv/guides/tools/)로 바로 실행:
 
 ```bash
